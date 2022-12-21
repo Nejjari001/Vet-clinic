@@ -1,5 +1,5 @@
 <div align="center">
-  <h3><b>Vet Clinic</b></h3>
+  <h1><b>Vet Clinic</b></h1>
 </div>
 
 <!-- TABLE OF CONTENTS -->
