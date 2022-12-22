@@ -1,27 +1,15 @@
 /* Populate database with sample data. */
 
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) 
-VALUES ('Agumon', date '02-03-2020', 10.23, true, 0);
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
- VALUES ('Gabumon', date '11-15-2018', 8, true, 2);
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) 
-VALUES ('Pikachu', date '01-17-2021', 15.04, false, 1);
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
- VALUES ('Devimon', date '05-12-2017', 11, true, 5);
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
- VALUES ('Charmander', date '02-08-2020', 11, false, 0);
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
- VALUES ('Plantmon', date '11-15-2021', 5.7, true, 2);
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
-VALUES ('Squirtle', date '05-02-1993', 12.13, false, 3);
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) 
-VALUES ('Angemon', date '06-12-2005', 45, true, 1);
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) 
-VALUES ('Boarmon', date '06-07-2005', 20.4, true, 7);
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) 
-VALUES ('Blossom', date '10-13-1998', 17, true, 3);
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) 
-VALUES ('Ditto', date '05-14-2022', 22, true, 4);
+INSERT INTO animals(name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES('Agumon', date '2020-02-03', 0, true, 10.23);
+INSERT INTO animals(name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES('Gabumon', date '2018-11-15', 2, true, 8);
+INSERT INTO animals(name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES('Pikachu', date '2021-01-07', 1, false, 15.04);
+INSERT INTO animals(name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES('Devimon', date '2017-05-12', 5, true, 11);
 
-
-
+/* Updated Table */
+INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Charmander', '2020-02-08', 0, false, -11);
+INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Plantmon','2021-11-15', 2, true, -5.7);
+INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Squirtle','1993-04-02', 3, false, -12.13);
+INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Angemon','2005-06-12', 1, true, -45);
+INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Boarmon','2005-06-07', 7, true, 20);
+INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Blossom','1998-10-13', 3, true, 17);
+INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Ditto','2022-05-14', 4, true, 22);
