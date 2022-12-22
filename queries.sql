@@ -9,3 +9,20 @@ SELECT  * FROM animals WHERE neutered = 'true';
 SELECT * FROM animals WHERE name <> 'Gabumon';
 SELECT * FROM animals WHERE weight_kg BETWEEN '10.4' AND '17.3';
 
+/* Database Transactions */
+BEGIN;
+UPDATE animals SET species = 'digimon' WHERE name like '%mon';
+UPDATE animals SET species = 'pokemon' WHERE species is null;
+COMMIT
+
+BEGIN
+DELETE FROM animals;
+ROLLBACK;
+
+BEGIN;
+DELETE FROM animals WHERE date_of_birth > '01/01/2022';
+SAVEPOINT savepoint_1;
+UPDATE animals SET weight_kg = (weight_kg * -1);
+ROLLBACK TO savepoint_1;
+UPDATE animals SET weight_kg = (weight_kg * -1) WHERE weight_kg < 0;
+COMMIT;
