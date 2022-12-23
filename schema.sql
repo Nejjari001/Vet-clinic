@@ -14,3 +14,5 @@ CREATE TABLE animals (
 --Update animals table
 ALTER TABLE animals
 ADD COLUMN species VARCHAR(30);
+
+
