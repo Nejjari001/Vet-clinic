@@ -87,3 +87,4 @@ CREATE TABLE visits (
     date_of_visit DATE,
     PRIMARY KEY(id)
 );
+
