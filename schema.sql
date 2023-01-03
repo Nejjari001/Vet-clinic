@@ -1,25 +1,24 @@
 /* Database schema to keep the structure of entire database. */
-
 CREATE DATABASE vet_clinic;
+
 CREATE TABLE animals (
-    id BIGSERIAL NOT NULL,
-    name VARCHAR(50) NOT NULL,
+    id BIGSERIAL PRIMARY KEY NOT NULL,
+    name VARCHAR(100) NOT NULL,
     date_of_birth DATE NOT NULL,
     escape_attempts INT NOT NULL,
     neutered BOOLEAN NOT NULL,
-    weight_kg DECIMAL NOT NULL,
-    PRIMARY KEY(id)
+    weight_kg DECIMAL NOT NULL
 );
 
---Update animals table
+-- Update animals table
 ALTER TABLE animals
-ADD COLUMN species VARCHAR(30);
+ADD COLUMN species VARCHAR(100);
 
 -- Multiple tables
 CREATE TABLE owners (
     id BIGSERIAL PRIMARY KEY NOT NULL,
-    full_name VARCHAR(100) NOT NULL,
-    age INT NOT NULL
+    full_name VARCHAR(100),
+    age INT
 );
 
 CREATE TABLE species (
@@ -71,4 +70,20 @@ CREATE TABLE visits (
     FOREIGN KEY (vet_id) REFERENCES vets(id),
     CONSTRAINT fk_animals
     FOREIGN KEY (animal_id) REFERENCES animals(id)
+);
+
+-- Add an email column to your owners table
+ALTER TABLE owners
+ADD COLUMN email VARCHAR(120);
+
+-- Drop visits table
+DROP TABLE visits;
+
+-- Create visits table
+CREATE TABLE visits (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    animal_id INT REFERENCES animals(id),
+    vet_id INT REFERENCES vets(id),
+    date_of_visit DATE,
+    PRIMARY KEY(id)
 );
