@@ -161,7 +161,7 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Derrick Mulinde**
+👤 **NEJJARI ABDELHAFID**
 
 - GitHub: [ @Nejjari001](https://github.com/Nejjari001)
 - Twitter: [@AbdoNJ19](https://https//twitter.com/AbdoNJ19)
